@@ -1,0 +1,884 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    background-color: #fafafa;
+}
+
+/*Alert*/
+#alert{
+    position: absolute;
+    top: 80px;
+}
+
+#alert .active{transform: translateX(0%);}
+
+#alert .alert-success, #alert .alert-danger, #alert .alert-info{
+    color: black;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+#alert .alert-success{border-left: 6px solid #198754;}
+
+#alert .alert-danger{border-left: 6px solid #dc3545;}
+
+#alert .alert-info{border-left: 6px solid #0d6efd;}
+
+#alert .close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#alert .close{opacity: 1;}
+
+header{
+    padding: .5rem;
+    background-color: #1A4FB0;
+}
+
+h1, h2, h3, h4, p{font-family: 'Rubik', sans-serif;}
+
+.negrita{font-weight: bold;}
+
+ul li{list-style-type: none;}
+
+.navbar, footer{background-color: #1A4FB0;}
+
+.navbar button{padding:0;}
+
+.navbar-toggler{border:none;}
+
+.navbar-toggler:focus{box-shadow: none;}
+
+.nav-link{
+    padding-left: .2rem;
+    padding-bottom: .5rem;
+}
+
+.campo-contrasena, .form-buscar{position: relative;}
+
+.campo-contrasena #btnContrasena{
+    position: absolute;
+    right: 20px;
+    top: 28px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 2px 10px;
+}
+
+#buscar{background-color: white;}
+
+.form-buscar #buscar{
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    z-index: 1;
+}
+
+#cerrar-sesion{
+    display: flex;
+    align-items: center;
+    padding-top: .5rem;
+}
+
+#cerrar-sesion .btn{padding: 0;}
+
+.dropdown-menu{
+    background-color: #1A4FB0;
+    border: none;
+}
+
+.dropdown-item a{
+    color: #FFFFFF8C;
+    text-decoration: none;
+}
+
+.dropdown-item a:hover{color: white;}
+
+.dropdown-item:hover{
+    background-color: transparent;
+    color: white;
+}
+
+.dropdown-item button{color: #FFFFFF8C;}
+
+.logo{
+    width: 110px;
+    height: 17px;
+    background: url("../img/logo.png") no-repeat center center;
+    position: absolute;
+    font-size: 0;
+    z-index: 1;
+    top: 22px;
+    left: 0px;
+}
+
+.btn-blue{
+    background-color: #1A4FB0;
+    color: white;
+}
+
+.btn-outline-blue{
+    border: solid .1rem #1A4FB0;
+    color: #1A4FB0;
+}
+
+.btn-outline-blue:hover{
+    background-color: #1A4FB0;
+    color: white;
+}
+
+.btn-blue:hover{
+    background-color: white;
+    color:#1A4FB0;
+    border: .05rem solid #1A4FB0;
+}
+
+.btn-deshacer{
+    padding: 0;
+    color:#575758;
+}
+
+.back + h1{margin-top: 1.5rem;}
+
+.opcional{
+    color: gray;
+    font-size: smaller;
+}
+
+section{padding: 2rem 2rem;}
+
+/* INTRO */
+
+h1{font-size: 1.3rem;}
+
+h1 + p{
+    font-weight: bold;
+    font-size: 1.9rem;
+    color:#00314a;
+}
+
+#intro button{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.3rem;
+}
+
+#intro{max-width: 100%;}
+
+#intro img{
+    border-radius: .5rem;
+    max-width: 99%;
+}
+
+/*¿Por qué QuicKourses?*/
+#motivos{
+    background-color:#00314a;
+    color: white;
+}
+
+#motivos h2, #modalidad h2, #view-cursos h2, #preg-frecuentes h2{
+    font-weight: bold;
+    font-size: 1.9rem;
+}
+
+#motivos h3, #modalidad h3, #cursos h2, #view-cursos h3{
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#motivos div img{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*Modalidad*/
+#modalidad .card{
+    border:none;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+#modalidad .card img{margin-bottom: 1rem;}
+
+/*Cursos*/
+#cursos ul, #view-cursos ul, #mis-cursos ul, #detalle-usuario ul, #detalle-usuario #cursos-cards, #detalle-usuario #cursos-cards ul{padding-left: 0;}
+
+#cursos li, #view-cursos li{
+    margin-bottom: 1rem;
+    padding: .5rem;
+}
+
+#cursos li img, #view-cursos li img{margin-bottom: 1rem;}
+
+#cursos button, #view-cursos button{
+    border: .05rem solid #1A4FB0;
+    color:#1A4FB0;
+    width: 50%;
+}
+
+#cursos button:hover, #view-cursos button:hover{
+    border: .05rem solid #1A4FB0;
+    background-color:#1A4FB0;
+    color: white;
+    width: 50%;
+}
+
+/*Preguntas frecuentes*/
+.accordion-button:not(.collapsed){color:#1A4FB0;}
+
+/*Footer*/
+
+footer{color: white;}
+
+#foot-info{padding: 1rem;}
+
+#foot-info p{margin-bottom: .5rem;}
+
+#foot-info div:nth-of-type(2){background-color: #1A4FB0;}
+
+#foot-info a{
+    color: white;
+    text-decoration: none;
+}
+
+#foot-info a:hover{color:#00314a;}
+
+footer div:last-of-type{
+    background-color: #00314a;
+    padding: 1rem;
+}
+
+#foot-contacto{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+footer p, footer a{
+    margin-bottom: 0;
+    font-size: .8rem;
+    color: white;
+}
+
+#foot-redes, #foot-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#redes{
+    display: flex;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+#redes li a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    margin-right: .5rem;
+}
+
+#redes li:first-of-type a{background: url(../img/fb.png) no-repeat center center;}
+#redes li:nth-of-type(2) a{background: url(../img/ig.png) no-repeat center center;}
+#redes li:nth-of-type(3) a{background: url(../img/tw.png) no-repeat center center;}
+#redes li:last-of-type a{background: url(../img/yb.png) no-repeat center center;}
+
+/*Sobre nosotros*/
+
+#sobre-nosotros h1 + p{font-size: 1.5rem;}
+
+#sobre-nosotros img, #historia img{
+    max-width: 100%;
+    border-radius: .5rem;
+}
+
+/*Misión*/
+
+#mision{background-color: #00314a;}
+
+#mision .card{
+    background-color: transparent;
+    border:none;
+    color: white;
+}
+
+#mision .card img{margin-bottom: 1rem;}
+
+/*Valores*/
+
+#valores h2{margin-bottom: 1rem;}
+
+::marker{
+    color:#1A4FB0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+ol li h3{color:#1A4FB0;}
+
+/*Historia*/
+
+#historia h2, #historia img{margin-bottom: 1rem;}
+
+/*Inicio Sesión*/
+
+#inicio-sesion form{
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#inicio-sesion h1{margin-bottom: 2rem;}
+
+#inicio-sesion form div{margin-bottom: 1rem;}
+
+#inicio-sesion button{
+    margin-top: .5rem;
+    max-width: 95%;
+}
+
+#inicio-sesion a{text-decoration: none;}
+
+/*Recuperar contraseña*/
+.recuperar-password h1 + p{
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.recuperar-password .campo-contrasena #btnContrasena{
+    right: 5px;
+    top: 52px;
+}
+
+/*Form nueva*/
+.admin h1, .admin p{text-align: center;}
+
+.admin h1 + p{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form-admin{justify-content: center;}
+
+.form-admin legend{font-size: 1rem;}
+
+.form-admin button{max-width: 95%;}
+
+.info-img{text-align: center;}
+
+.info-img img{
+    margin-bottom: 1rem;
+    max-width: 98%;
+}
+
+#error-titulo, #error-fecha, #error-sinopsis, #error-cuerpo, #error-nombre, #error-apellido, #error-email, #error-password, #error-precio, #error-descripcion, #error-fecha_inicio, #error-duracion_curso_id{
+    color: red;
+    font-size: .8rem;
+    text-align: left;
+}
+
+/*Detalle entrada*/
+
+#detalle-entrada img{max-width: 95%;}
+
+#detalle-entrada img, #detalle-entrada span{margin-bottom: 1rem;}
+
+#detalle-entrada h1{
+    font-weight: bold;
+    color:#1A4FB0;
+}
+
+#detalle-entrada h1 + p{
+    font-weight: normal;
+    color:gray;
+    font-size: .8rem;
+}
+
+#detalle-entrada p:nth-of-type(2){font-weight: bold;}
+
+/*Eliminar*/
+
+.admin .card img{text-align: center;}
+
+.admin .card p{text-align: left;}
+
+.admin .card{justify-content: center;}
+
+#form-eliminar{text-align: center;}
+
+/* Admin mis-cursos */
+.admin-cursos ul{padding-left: 0;}
+
+.admin-cursos form{
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-cursos form button{
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+/*Blog*/
+
+#blog ul{padding-left: 0;}
+
+#entradas li{margin-bottom: 1.5rem;}
+
+#blog h2{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#blog p{color: gray;}
+
+#blog img{margin-bottom: 1rem;}
+
+#blog .card span{
+    width: 100px;
+    margin-bottom: .5rem;
+}
+
+#entradas a{margin-bottom: 1rem;}
+
+/*Registro*/
+#registro h1 + p{font-size: 1rem;}
+
+#registro h1, #registro h1 + p{text-align: center;}
+
+#registro form{
+    flex-direction: column;
+    align-items: center;
+}
+
+#registro button{max-width: 93%;}
+
+/*Detalle curso*/
+#img-cdetalle img{
+    width: 100%;
+    height:auto;
+}
+
+#detalle-curso span + h1{
+    font-weight: bold;
+    font-size: 1.9rem;
+    color:#00314a;
+    margin-top: .5rem;
+}
+
+#detalle-curso h1 + p{
+    font-weight: normal;
+    font-size: 1rem;
+    color: #212529;
+}
+
+#detalle-curso > span{
+    font-size: 1.3rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+#detalle-curso ul{padding-left: 0;}
+
+#detalle-curso .txt-info{
+    font-size: 1rem;
+    display: block;
+    margin-top: .8rem;
+}
+
+.info-util a{margin-bottom: 2rem;}
+
+/* Panel de administración */
+
+#panel-admin h2{
+    font-size: 1rem;
+    color:rgb(153, 153, 153);
+}
+
+#panel-admin a{margin-bottom: .5rem;}
+
+#panel-cards, .tabla-inscripciones{margin-bottom: 1.5rem;}
+
+#panel-cards div + p{
+    color:#1A4FB0;
+    font-size: 1.5rem;
+}
+
+#cursos-cards{
+    display: flex;
+    flex-direction: column;
+}
+
+#cursos-cards > li{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    max-width: 350px;
+    /*margin-right: 1rem;*/
+}
+
+#cursos-cards h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color:#00314a;
+}
+
+#cursos-cards p{
+    margin-bottom: .5rem;
+    color:rgb(153, 153, 153);
+}
+
+#cursos-cards a{
+    font-size: .8rem;
+    text-decoration: none;
+}
+
+#cursos-cards a:last-of-type{margin-left: .5rem;}
+
+.btns{margin-top: 1rem;}
+
+#panel-cards p:last-of-type{font-size: .9rem;}
+
+#panel-cards .card, #cursos-cards .card, .tabla-inscripciones{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border: none;
+}
+
+.card-titulo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-titulo svg{color:#1A4FB0;}
+
+.tabla-inscripciones{
+    padding: 2rem 1rem;
+    border-radius: 10px;
+}
+
+.inicio-cursos span, .papelera span{font-size: .8rem;}
+
+/*Perfil*/
+#foto-perfil img{
+    border-radius: 0.5rem;
+    margin-right: .5rem;
+}
+
+#perfil article:last-child{margin-top: 1rem;}
+
+#perfil article:last-child img{margin-bottom: .5rem;}
+
+/*404*/
+#pag-404 ul, #mp-msj ul{padding-left: 0;}
+
+#pag-404 ul li a, #mp-msj a{text-decoration: none;}
+
+/*Detalle usuarios*/
+
+#detalle-usuario #cursos-cards .card ul li:first-child{
+    color:#575758;
+    margin-bottom: .5rem;
+}
+
+@media screen and (min-width: 335px){
+    .recuperar-password .campo-contrasena #btnContrasena{top: 28px;}
+}
+
+@media screen and (max-width: 334px){
+    #registro #btnContrasena{top: 50px !important;}
+}
+
+@media screen and (max-width: 767px){
+    table{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    table thead{display: none;}
+
+    table tr{
+        margin-bottom: 2rem;
+        display: block;
+    }
+
+    table td{
+        display: block;
+        padding: .5rem;
+        border: .05px solid #1A4FB0;
+    }
+
+    table td span{font-weight: bold;}
+
+    table svg{
+        width: 18px; 
+        height: 18px;
+    }
+
+    table .btn{margin-right: .5rem;}
+
+    #intro div:first-child{margin-bottom: 1rem;}
+
+    .inicio-cursos a, .inicio-entradas a{margin-bottom: .5rem;}
+}
+
+@media screen and (max-width: 991px){
+    .logo {left: calc(50% - 55px);}
+    #detalle-usuario #cursos-cards{margin-top: 1rem;}
+}
+
+@media screen and (min-width: 768px){
+
+    section{padding: 3rem 2rem;}
+
+    /* Intro */
+    #intro{
+        display: flex;
+        align-items: center;
+    }
+
+    #intro div:first-of-type{width: 450px;}
+
+    #intro button{max-width: 70%;}
+
+    /*Motivos*/
+    #motivos{text-align: center;}
+
+    #mtvs > div{
+        width: 350px;
+        margin: auto;
+    }
+
+    /*Modalidades*/
+    #modalidad > div{display: flex;}
+
+    #modalidad .card{
+        margin-right: 1rem;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    /*Cursos*/
+    #cursos ul, #view-cursos ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    #cursos ul li, #view-cursos ul li{max-width: 345px;} 
+
+    #cursos .card, #view-cursos .card{padding: 1rem;}
+
+    /*Admin mis-cursos*/
+    .admin-cursos form{
+        align-items: flex-end;
+        flex-direction: row;
+    }
+    
+    .admin-cursos form button{margin: 0 .5rem;}
+
+    /*Mision*/
+
+    #mision{display: flex;}
+
+    /*Inicio de sesión*/
+    #alert > div{justify-content: right;}
+
+    #inicio-sesion{text-align: center;}
+
+    #inicio-sesion form{
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    /*Ver entrada*/
+    #detalle-entrada img{max-width: 100%;}
+
+    .info-img img{max-width: 100%;}
+
+    /*Blog*/
+    #entradas{justify-content: space-evenly;}
+
+    #entradas a{width: 100px;}
+
+    #entradas{
+        padding: 0;
+        margin-bottom: 3rem;
+    }
+
+    /*Footer*/
+    #foot-info{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 575px){
+    #entradas{padding: 0 .8rem !important;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+
+    #entradas{flex-wrap: nowrap;}
+
+    #entradas li{margin-right: .2rem;}
+
+    #alert{right: 30px;}
+}
+
+@media screen and (min-width: 993px) and (max-width: 1510px){
+    #sobre-nosotros div:first-child{margin-right: .5rem;}
+    #historia div{margin-left: .5rem;}
+}
+
+@media screen and (min-width: 993px){
+    .logo{
+        left: 30px;
+        top: 26px;
+    }
+
+    #foot-logo{padding-left: 1.5rem;}
+
+    #cerrar-sesion{padding-top: 0;}
+
+    h1+p{font-size: 3.4rem;}
+
+    #intro{justify-content: center;}
+
+    #intro button{
+        width: 200px;
+        margin-top: 1rem;
+    }
+
+    #intro div:first-of-type{width: 600px;}
+
+    /*Motivos*/
+
+    #motivos{padding: 5rem;}
+
+    #mtvs{display: flex;}
+
+    /*Modalidad*/
+
+    #modalidad h2{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    #modalidad > div{justify-content: space-evenly;}
+
+    #modalidad .card{width: 450px;}
+
+    /*Cursos*/
+
+    #view-cursos h2{
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    /*Preguntas frecuentes*/
+    #preg-frecuentes h2{margin-bottom: 2rem;}
+
+    #accordionFlushExample{max-width: 930px;}
+
+    /*Footer*/
+    #foot-redes{
+        align-items: flex-end;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    /*Sobre nosotros*/
+    #sobre-nosotros > div{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #sobre-nosotros > div div:first-of-type{width: 600px;}
+
+    #mision{justify-content: space-evenly;}
+
+    #mision .card{width: 400px;}
+
+    /*Valores*/
+    #valores{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #valores ol{width: 650px;}
+
+    /*Historia*/
+    #historia{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    #historia div:first-child{width: 650px;}
+
+    /*Blog*/
+    #entradas li{margin-right: .5rem;}
+
+    /*Detalle curso*/
+    #img-cdetalle img{width: 100%;}
+
+    .info-objetivos{
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .objetivos{border-left: .15rem solid #1A4FB0;}
+
+    .objetivos svg{color:#1A4FB0;}
+
+    .objetivos ul li{margin-bottom: 5px;}
+
+    /*Panel Admi*/
+    #panel-admin .group-card{display: flex;}
+
+    #panel-admin .group-card .card{margin-right: 1rem;}
+
+    /* Perfil */
+    #perfil{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #foto-perfil{display: flex;}
+
+    #perfil article:last-child{margin-top: 0rem;}
+    
+    #perfil article:last-child img{margin-bottom: 0rem;}
+
+    #apariencia textarea{resize: none;}
+
+    /* Mis cursos */ 
+    #cursos-cards{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #cursos-cards > li{margin: 1rem 1rem 0 0;}
+
+    /*Curso ver*/
+    .info-util a{margin-bottom: 0;}
+
+    #alert{right: 30px;}
+}
